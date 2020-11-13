@@ -35,7 +35,7 @@
 
         var auth = firebase.auth();
     </script>
-    
+
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container"><a class="navbar-brand logo" href="dashboard.html">Next Gen Text</a><button
                 data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
@@ -54,26 +54,31 @@
         <section class="clean-block payment-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">&lt;NAME OF BOOK&gt;</h2>
+                    <h2 class="text-info" id="book_name">
+                        <!-- populate with jquery -->
+                    </h2>
                 </div>
                 <form>
                     <div class="text-center products"><img src="assets/img/tech/image2.jpg"></div>
                     <div class="card-details">
-                        <div></div>
-                        <div class="text-center"><audio controls=""></audio></div><select class="form-control">
-                            <optgroup label="Chapters">
-                                <option value="12" selected="">Chapter 1</option>
-                                <option value="2">Chapter 2</option>
-                                <option value="14">Chapter 3</option>
+                        <div id="audio_container" class="text-center">
+                            <!-- populate by jquery -->
+                        </div>
+                        <select class="form-control">
+                            <optgroup label="Chapters" id="chapter_options">
+                                <!-- populate by jquery -->
                             </optgroup>
                         </select>
                         <div class="form-row">
                             <div class="col-sm-12 text-center">
-                                <div class="form-group"><button class="btn btn-primary btn-block"
-                                        data-bs-hover-animate="pulse" type="submit">Select Audio</button></div>
+                                <div class="form-group">
+                                    <button id="select_audio_button" class="btn btn-primary btn-block"
+                                        data-bs-hover-animate="pulse">
+                                        Select Audio
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div></div>
                     </div>
                 </form>
             </div>
@@ -86,6 +91,8 @@
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="/control/auth.js"></script>
+    <script src="/control/load.js"></script>
+    <script src="/control/getAudio.js"></script>
 </body>
 
 </html>

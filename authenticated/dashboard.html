@@ -57,76 +57,17 @@
                     <h2 class="text-info">Dashboard</h2>
                     <p>What do you want to study next?</p>
                 </div>
-                <div class="text-center"><button class="btn btn-primary" data-bs-hover-animate="tada" type="button">Add
-                        new Textbook</button></div>
+                <div class="text-center">
+                    <button id="add_textbook_button" class="btn btn-primary" data-bs-hover-animate="tada">
+                        Add new Textbook
+                    </button>
+                </div>
                 <div class="content">
                     <div class="row justify-content-center">
                         <div class="col-md-9">
                             <div class="products">
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
-                                                        src="assets/img/tech/image2.jpg"></a><a href="#"></a></div>
-                                            <div class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></div>
-                                        </div>
-                                    </div>
+                                <div class="row no-gutters" id="item_list">
+                                    <!-- set up by jquery -->
                                 </div>
                             </div>
                         </div>
@@ -142,6 +83,8 @@
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="/control/auth.js"></script>
+    <script src="/control/load.js"></script>
+    <script src="/control/addTextbook.js"></script>
 </body>
 
 </html>
