@@ -22,13 +22,14 @@
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
-            apiKey: "AIzaSyAEjnsZ8nVhqHbhN2pZGWWRXPbTTPhSEOs",
-            authDomain: "nextgentext-db1c3.firebaseapp.com",
-            databaseURL: "https://nextgentext-db1c3.firebaseio.com",
-            projectId: "nextgentext-db1c3",
-            storageBucket: "nextgentext-db1c3.appspot.com",
-            messagingSenderId: "305786184455",
-            appId: "1:305786184455:web:b4dd3d6d4dc09597badba2"
+            apiKey: "AIzaSyA72hmmNga4xOEC3V1LJ4bbOwNsoJ97cuI",
+            authDomain: "book2audio-be677.firebaseapp.com",
+            databaseURL: "https://book2audio-be677.firebaseio.com/",
+            projectId: "book2audio-be677",
+            storageBucket: "book2audio-be677.appspot.com",
+            messagingSenderId: "74814148576",
+            appId: "1:74814148576:web:0ac07bc85fad2b598de585",
+            measurementId: "G-8RH3T8WTND"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -58,9 +59,27 @@
                     <p>What do you want to study next?</p>
                 </div>
                 <div class="text-center">
-                    <button id="add_textbook_button" class="btn btn-primary" data-bs-hover-animate="tada">
-                        Add new Textbook
-                    </button>
+                    <form id="data_form" enctype="multipart/form-data">
+                        <input id="file_upload" name="file" type="file" class="btn btn-primary" data-bs-hover-animate="tada" />
+                        <button id="add_textbook_button" class="btn btn-primary" data-bs-hover-animate="tada">
+                            Add new Textbook
+                        </button>
+                    </form>
+
+                    <select class="form-control">
+                        <optgroup label="Voices" id="voice_options">
+                            <option label="Female Voice 1 - Olivia" value="en-US-Wavenet-C" selected />
+                            <option label="Female Voice 2 - Emma" value="en-US-Wavenet-E" />
+                            <option label="Female Voice 3 - Ava" value="en-US-Wavenet-F" />
+                            <option label="Female Voice 4 - Sophia" value="en-US-Wavenet-G" />
+                            <option label="Female Voice 5 - Amelia" value="en-US-Wavenet-H" />
+                            <option label="Male Voice 1 - Liam" value="en-US-Wavenet-A" />
+                            <option label="Male Voice 2 - Noah" value="en-US-Wavenet-B" />
+                            <option label="Male Voice 3 - William" value="en-US-Wavenet-D" />
+                            <option label="Male Voice 4 - Benjamin" value="en-US-Wavenet-I" />
+                            <option label="Male Voice 5 - Lucas" value="en-US-Wavenet-J" />
+                        </optgroup>
+                    </select>
                 </div>
                 <div class="content">
                     <div class="row justify-content-center">

@@ -10,7 +10,8 @@ if (signInForm) {
         // var cred = await auth.signInWithEmailAndPassword(email, password);
         // console.log(cred);
         auth.signInWithEmailAndPassword(email, password).then((cred) => {
-            console.log(cred);
+            console.log(cred.user.uid);
+            localStorage.setItem("userid", cred.user.uid);
             url = window.location.origin + "/authenticated/dashboard.html";
             window.location.replace(url);
         });
@@ -27,7 +28,8 @@ if (signUpForm) {
         const password = signUpForm["password"].value;
 
         auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-            console.log(cred);
+            console.log(cred.user.uid);
+            localStorage.setItem("userid", cred.user.uid);
         });
     });
 }
@@ -40,6 +42,7 @@ if (logOutButton) {
         auth.signOut().then(() => {
             url = window.location.origin + "/unauthenticated/login.html";
             window.location.replace(url);
+            localStorage.setItem("userid", "");
         });
     });
 }
