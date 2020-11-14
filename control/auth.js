@@ -12,7 +12,7 @@ if (signInForm) {
         auth.signInWithEmailAndPassword(email, password).then((cred) => {
             console.log(cred.user.uid);
             localStorage.setItem("userid", cred.user.uid);
-            url = window.location.origin + "/authenticated/dashboard.html";
+            url = window.location.origin + "/view/authenticated/dashboard.html";
             window.location.replace(url);
         });
     });
@@ -40,7 +40,7 @@ if (logOutButton) {
     logOutButton.addEventListener("click", (e) => {
         e.preventDefault();
         auth.signOut().then(() => {
-            url = window.location.origin + "/unauthenticated/login.html";
+            url = window.location.origin + "/view/unauthenticated/login.html";
             window.location.replace(url);
             localStorage.setItem("userid", "");
         });
