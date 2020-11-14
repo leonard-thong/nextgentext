@@ -10,7 +10,7 @@ $(document).ready(function () {
         var bookNames = [];
 
         $.get(
-            "http://159.65.223.140:5001/" + userID + "/get-all-books",
+            "https://159.65.223.140:5001/" + userID + "/get-all-books",
             function (res) {
                 bookNames = res;
                 console.log(res);
@@ -18,7 +18,7 @@ $(document).ready(function () {
         ).done(function () {
             bookNames.forEach((book) => {
                 i = document.createElement("img");
-                i.setAttribute("src", "assets/img/tech/image2.jpg");
+                i.setAttribute("src", "assets/img/scenery/image6.png");
                 i.setAttribute("class", "img-fluid d-block mx-auto");
 
                 a = document.createElement("a");
@@ -65,7 +65,7 @@ $(document).ready(function () {
         options = [];
 
         $.get(
-            "http://159.65.223.140:5001/" +
+            "https://159.65.223.140:5001/" +
                 bookname +
                 "/get-all-audiobook-chapters",
             function (res) {

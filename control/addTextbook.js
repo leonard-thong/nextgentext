@@ -12,7 +12,7 @@ $("#add_textbook_button").on("click", function (e) {
     var settings = {
         crossDomain: true,
         url:
-            "http://159.65.223.140:5001/create-pdf?user_id=" +
+            "https://159.65.223.140:5001/create-pdf?user_id=" +
             userID +
             "&voice_name=" +
             voice_name,
